@@ -17,23 +17,3 @@ networks:
   backend:
     external:
       name: proxy
-      
-      
-version: '3.4'
-services:
-  mongodb:
-    image: mongo
-    container_name: mongo
-    ports:
-      - 27091:27017
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=root
-      - MONGO_INITDB_ROOT_PASSWORD=root123
-    volumes:
-      - ./mongo_data:/data/db
-    networks:
-      - backend
-networks:
-  backend:
-    external:
-      name: proxy
